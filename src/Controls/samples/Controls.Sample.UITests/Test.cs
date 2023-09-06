@@ -70,6 +70,7 @@ namespace Maui.Controls.Sample
 			IsEnabled,
 			Navigation,
 			InputTransparent,
+			NotInputTransparent,
 			Layout,
 			X,
 			Y,
@@ -712,13 +713,43 @@ namespace Maui.Controls.Sample
 
 		public enum InputTransparency
 		{
-			Default,
-			IsFalse,
-			IsTrue,
+			// Single Control
+			ButtonNotSet,
+			Button,
+			TransButtonInputBlocked,
+			// Button
+			ButtonOverlay,
+			TransButtonOverlay,
+			// Image
+			ImageOverlayInputBlocked,
+			TransImageOverlay,
+			ImageBackOverlayInputBlocked,
+			TransImageBackOverlay,
+			// Label
+			LabelOverlayInputBlocked,
+			TransLabelOverlay,
+			// ActivityIndicator
+			ActivityIndicatorOverlayInputBlocked,
+			TransActivityIndicatorOverlay,
+			// ProgressBar
+			ProgressBarOverlayInputBlocked,
+			TransProgressBarOverlay,
+			// Layout
+			LayoutOverlayInputBlocked,
 			TransLayoutOverlay,
 			TransLayoutOverlayWithButton,
 			CascadeTransLayoutOverlay,
 			CascadeTransLayoutOverlayWithButton,
+			// CollectionView
+			CollectionViewItemLayoutOverlay,
+			CollectionViewItemTransLayoutOverlay,
+			CollectionViewItemButtonOverlay,
+			CollectionViewItemTransButtonOverlay,
+			// ListView
+			ListViewItemLayoutOverlay,
+			ListViewItemTransLayoutOverlay,
+			ListViewItemButtonOverlay,
+			ListViewItemTransButtonOverlay,
 		}
 
 		public static class InputTransparencyMatrix
