@@ -142,6 +142,10 @@ namespace TestUtils.Appium.UITests
 			switch (testConfig.TestDevice)
 			{
 				case TestDevice.iOS:
+					appiumOptions.AddAdditionalAppiumOption("xcodeOrgId", "");
+					appiumOptions.AddAdditionalAppiumOption("xcodeSigningId", "Apple Development");
+					appiumOptions.AddAdditionalAppiumOption("showXcodeLog", "true");
+					//appiumOptions.AddAdditionalAppiumOption("updatedWDABundleId", "true");
 					appiumOptions.AddAdditionalAppiumOption(MobileCapabilityType.Udid, testConfig.Udid);
 					appiumOptions.AddAdditionalAppiumOption(IOSMobileCapabilityType.BundleId, appId);
 					break;

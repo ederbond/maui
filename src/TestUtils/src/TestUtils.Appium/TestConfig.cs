@@ -54,6 +54,8 @@
 
 		public string FrameworkVersion { get; set; }
 
+		public bool RealDevice { get; set; }
+
 		public override bool Equals(object? obj)
 		{
 			if (obj is not TestConfig rhsTestConfig)
