@@ -115,8 +115,7 @@ namespace Microsoft.Maui.Platform
 				if (_content != null && _content.Parent != this)
 				{
 					_content.RemoveFromParent();
-					if (_hScrollView != null)
-						_hScrollView.RemoveFromParent();
+					_hScrollView?.RemoveFromParent();
 					AddView(_content);
 				}
 			}
@@ -333,8 +332,7 @@ namespace Microsoft.Maui.Platform
 		{
 			try
 			{
-				if (canvas != null)
-					canvas.ClipRect(canvas.ClipBounds);
+				canvas?.ClipRect(canvas.ClipBounds);
 
 				base.Draw(canvas);
 			}
